@@ -34,6 +34,16 @@ a {
   grid-area: "room";
   align-self: center;
 }
+.sticky{
+  align-self: flex-start;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  top: 50px;
+  bottom: 40%;
+  position: -webkit-sticky;
+  position: sticky;
+  
+}
 .room {
   max-width: 80%;
   max-height: 90vh;
@@ -144,6 +154,7 @@ a {
   .left {
     padding-right: 16px;
     padding-left: 16px;
+    position: sticky;
   }
   #intro {
     min-height: 100vh;
