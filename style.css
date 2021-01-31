@@ -5,6 +5,7 @@ html, body {
   background: black;
   height: 100%;
 }
+
 a {
   text-decoration: none;
 }
@@ -78,7 +79,7 @@ a {
   cursor: pointer;
 }
 .title {
-  font-family: 'TruenoBold';
+  font-family: 'Orbitron', sans-serif;
 }
 #sponsors {
   text-align: center;
@@ -96,7 +97,7 @@ a {
   margin-top: 10px;
 }
 #intro {
-  background-color: #2D313A;
+  background-image: url('https://preview.redd.it/n2u6sf3vlum41.jpg?auto=webp&s=d6d636cce70ef2f028166650553728d9ab24db1f');
 }
 #about {
   background-color: #172120;
@@ -151,6 +152,41 @@ a {
   margin-right: auto;
 }
 @media (min-width: 951px) {
+  .neon {
+    animation: neon 2s linear infinite;
+    -moz-animation: neon 2s linear infinite;
+    -webkit-animation: neon 2s linearx infinite;
+  }
+  @keyframes neon {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #fa16b6, 0 0 3vw #fa16ae, 0 0 10vw #fa16a3, 0 0 10vw #FA1C16, 0 0 .4vw #fe28a5, .5vw .5vw .1vw #806914;
+      color: #fbd0ff;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #800b67, 0 0 1.5vw #800b70, 0 0 5vw #800b6d, 0 0 5vw #800b53, 0 0 .2vw #800b63, .5vw .5vw .1vw #40340A;
+      color: #c700ac;
+    }
+  }
+  .flux {
+    animation: flux 2s linear infinite;
+    -moz-animation: flux 2s linear infinite;
+    -webkit-animation: flux 2s linear infinite;
+    -o-animation: flux 2s linear infinite;
+  }
+  
+  @keyframes flux {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+      color: white ;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+      color: #28D7FE;
+    }
+  }
+  
   .left {
     padding-right: 16px;
     padding-left: 16px;
