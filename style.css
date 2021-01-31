@@ -9,6 +9,10 @@ html, body {
 a {
   text-decoration: none;
 }
+
+.contact{
+  width: 60px;
+}
 .email-link {
   color: white;
   text-decoration: underline;
