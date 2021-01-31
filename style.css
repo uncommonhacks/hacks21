@@ -51,7 +51,7 @@ a {
 .right {
   font-family: 'Lato';
   font-weight: 300;
-  text-align: right;
+  text-align: left;
   grid-area: "content";
 }
 .nonintro {
