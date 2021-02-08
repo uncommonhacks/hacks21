@@ -416,6 +416,9 @@ on diffrent interval using keyframe*/
     grid-template-rows: 50vh auto;
     grid-template-columns: 100vw;
   }
+  .rain:before { 
+    visibility: hidden;
+  }
   .left {
     width: 100vw;
     order: 1;
@@ -564,4 +567,7 @@ div{
     text-align:right;
 
   } 
+  .rain:before { 
+    visibility: hidden;
+  }
 }
