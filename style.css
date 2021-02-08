@@ -4,12 +4,89 @@ html, body {
   color: white;
   background: black;
   height: 100%;
+
+  overflow-x:hidden;
+  width:100%;
+  max-width:100%;
+  min-width:100%;
 }
 
 a {
   text-decoration: none;
 }
 
+.rain { 
+  background-image: url( 
+https://media.geeksforgeeks.org/wp-content/uploads/20200828184536/download-200x200.png); 
+  background-size: cover; 
+  width: 50%;
+  animation: color-change 10s linear infinite; 
+  animation-delay: 1s; 
+} 
+/*adding rain img and making opacity 0*/ 
+.rain:before { 
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 45%; 
+  height: 100%; 
+  background-image: url( 
+http://pngimg.com/uploads/rain/small/rain_PNG13466.png); 
+  animation: rain 1s linear infinite; 
+  opacity: 0.0; 
+} 
+/* just changing the position of image 
+of rain using keyframes*/ 
+@keyframes rain { 
+  0% { 
+    background-position: 0 0; 
+    opacity: 1; 
+  } 
+
+  100% { 
+    background-position: 0% 80%; 
+    opacity: 1; 
+  } 
+} 
+/* applying filter at different angle 
+on diffrent interval using keyframe*/ 
+@keyframes color-change { 
+  0% { 
+    filter: hue-rotate(0deg); 
+  } 
+  50% { 
+    filter: hue-rotate(0deg); 
+  } 
+  100% { 
+    filter: hue-rotate(360deg); 
+  } 
+} 
+
+
+
+@font-face {
+  font-family: 'Neon';
+  src: url('fonts/Neon.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+@font-face {
+  font-family: 'Gris';
+  src: url('fonts/Acier-TextGris.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+@font-face {
+  font-family: 'Las';
+  src: url('fonts/LasEnterPersonalUseOnly-D301.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+@font-face {
+  font-family: 'Trueno Lite';
+  src: url('fonts/TruenoRgIt.otf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+@font-face {
+  font-family: 'Trueno Reg';
+  src: url('fonts/TruenoRg.otf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
 .contact{
   width: 60px;
 }
@@ -62,8 +139,14 @@ a {
 .nonintro {
   text-align: left;
 }
+.times{
+  color:rgb(5, 167, 241);
+  font-family: "Trueno Reg";
+  display: block;
+}
 .subinfo {
   display: block;
+  width: 100%;
 }
 .subnonintro {
   margin-bottom: 20px;
@@ -76,14 +159,25 @@ a {
   text-align: center;
   padding: 15px 0;
   margin-left: auto;
-  margin-right: 0;
-  background: #ab6be7;
+  margin-right: auto;
+  background: #81d8fa;
   color: white;
   font-weight: 600;
+  border-radius:25px;
   cursor: pointer;
 }
-.title {
-  font-family: 'Orbitron', sans-serif;
+.glow{
+  text-shadow: 0 0 4px rgb(5, 167, 241), 0 0 6px rgb(7, 150, 150), 0 0 10px #5ec3e2, 0 0 10px #0073e6, 0 0 20px #0073e6, 0 0 15px #0073e6, 0 0 18px #0073e6;
+}
+.uncommon {
+  font-family: 'Gris';
+
+}
+.hacks {
+  font-family: 'Las';
+}
+.year{
+  font-family: 'Neon';
 }
 #sponsors {
   text-align: center;
@@ -102,21 +196,25 @@ a {
   margin-top: 10px;
 }
 #intro {
-  background-image: url('https://preview.redd.it/n2u6sf3vlum41.jpg?auto=webp&s=d6d636cce70ef2f028166650553728d9ab24db1f');
+  background-color:#090f10;
+  background-image: url('img/home.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
 }
 #about {
-  background-color: #0b0324;
+  background-color: #090f10;
   
 }
 #faq {
-  background-color: #0b0324;
+  background-color: #090f10;
 }
 .faqq {
   font-weight: 600;
   padding-top: 30px;
 }
 #schedule {
-  background-color:#0b0324;
+  background-color:#090f10;
 }
 #mlh-trust-badge {
   display:block;
@@ -129,9 +227,11 @@ a {
   z-index:10000;
 }
 #tagline {
-  font-family: "TruenoLightItalic";
-  font-size: 30px;
-  padding-bottom: 20px;
+  font-family: "Trueno Lite";
+  font-size: 28px;
+  width: 600px;
+  margin-top: -10px;
+  color: white;
 }
 .sponsor-img {
     max-height: 70px;
@@ -160,44 +260,9 @@ a {
   margin-right: auto;
 }
 @media (min-width: 951px) {
-  .neon {
-    animation: neon 2s linear infinite;
-    -moz-animation: neon 2s linear infinite;
-    -webkit-animation: neon 2s linearx infinite;
-  }
-  @keyframes neon {
-    0%,
-    100% {
-      text-shadow: 0 0 1vw #fa16b6, 0 0 3vw #fa16ae, 0 0 10vw #fa16a3, 0 0 10vw #FA1C16, 0 0 .4vw #fe28a5, .5vw .5vw .1vw #806914;
-      color: #fbd0ff;
-    }
-    50% {
-      text-shadow: 0 0 .5vw #800b67, 0 0 1.5vw #800b70, 0 0 5vw #800b6d, 0 0 5vw #800b53, 0 0 .2vw #800b63, .5vw .5vw .1vw #40340A;
-      color: #c700ac;
-    }
-  }
-  .flux {
-    animation: flux 2s linear infinite;
-    -moz-animation: flux 2s linear infinite;
-    -webkit-animation: flux 2s linear infinite;
-    -o-animation: flux 2s linear infinite;
-  }
-  
-  @keyframes flux {
-    0%,
-    100% {
-      text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-      color: white ;
-    }
-    50% {
-      text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-      color: #28D7FE;
-    }
-  }
-  
   .left {
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 10px;
+    padding-left: 10px;
     position: sticky;
   }
   #intro {
@@ -227,8 +292,8 @@ a {
     justify-content: center;
   }
   #intro .right {
-    padding-right: 6vw;
-    padding-left: 4vw;
+    padding-right: 0vw;
+    padding-left: 0vw;
   }
   #schedule .right {
     padding-left: 30px;
@@ -243,20 +308,40 @@ a {
     padding-bottom: 50px;
   }
   .subinfo {
-    font-family: 'Courier';
+    font-family: 'Trueno Reg';
     font-weight: bold;
     font-size: 1.3em;
-  }
-  .otherinfo {
-    margin-top: 20px;
-    max-width: 50vw;
   }
   .subnonintro {
     font-size: 1.2em;
   }
+  .times{
+    font-size:2em;
+    width:45vw;
+    margin-top:10px;
+    text-align:right;
+
+  }
   .room {
     margin-top: auto;
     margin-bottom: auto;
+  }
+  .uncommon {
+    font-size: 8vw;
+    color: white;
+    margin-top: 100px;
+  }
+  .hacks {
+    font-size: 9.5vw;
+    margin-top: -6vw;
+    margin-left: 330px;
+    color: white;
+  }
+  .year{
+    font-size: 9vw;
+    margin-top: -150px;
+    color: white;
+  
   }
   .title {
     font-size: 3.5em;
@@ -266,13 +351,17 @@ a {
     font-size: 2.8em;
   }
   #register {
-    font-family: 'Courier';
-    margin-top: 75px;
+    font-family: 'Trueno';
+    margin-top: 20px;
+    position: absolute;
+    right: 0px;
+    left:28vw;
   }
   #tagline {
-    font-family: 'Courier';
+    font-family: 'Trueno';
     font-weight: bold;
-    text-align: left;
+    text-align: right;
+    font-size:1.8em;
   }
 }
 @media (max-width: 950px) {
@@ -294,12 +383,7 @@ a {
     padding-bottom: 30px;
     order: 2;
   }
-  .otherinfo {
-    margin-top: 30px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
   .title {
     font-size: 2em;
     width: 80%;
@@ -307,22 +391,77 @@ a {
     margin-right: auto;
     text-align: center;
   }
-  #subtitle {
-    text-align: center;
+  .uncommon {
+    font-size: 3em;
+    color: white;
+    text-align: right;
+    margin-top:50px;
+  }
+  .hacks {
+    font-size: 4em;
+    margin-top:-20px;
+    text-align:right;
+    color: white;
+  }
+  .year{
+    font-size: 4em;
+    text-align: right;
+    color: white;
+  
   }
   #year {
     font-size: 1.6em;
   }
   #register {
-    margin: 20px auto 0 auto;
+    float:right;
+  }
+  .clickable_button {
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: #81d8fa;
+    color: white;
+    font-weight: 600;
+    border-radius:25px;
+    cursor: pointer;
   }
   .room {
     max-height: 50vh;
   }
   #tagline {
-    text-align: center;
+    text-align: right;
     font-size: 20px;
+    width: 100%;
   }
+  #intro{
+    background-size: 220%;
+    height:120vw;
+    background-repeat: no-repeat;
+  }
+  .rain:before { 
+    width: 100%; 
+  }
+  .times {
+    font-family: 'Trueno Reg';
+    font-weight: bold;
+    font-size: 1em;
+    text-align: right;
+    margin-left: -50px;
+  }
+  .subinfo{
+    text-align: center;
+    width:100%;
+  }
+  .otherinfo{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+div{
+  color: white;
 }
 @media (min-width: 550px) {
   #sponsor-jpm, #sponsor-morningstar {
@@ -331,4 +470,55 @@ a {
   #sponsor-us {
     margin-top: 100px;
   }
+}
+
+@media (min-width: 1024px) and (min-height: 768px){
+  #intro{
+    background-size: cover;
+    height:100%;
+    background-repeat: no-repeat;
+  }  
+  .uncommon {
+    font-size: 10vw;
+    text-align: right;
+    margin-left:70px;
+    color: white;
+    margin-top: 100px;
+  }
+  .hacks {
+    font-size: 11vw;
+    margin-top: -6vw;
+    margin-left: 340px;
+    color: white;
+  }
+  .year{
+    font-size: 9vw;
+    margin-top:-4vw;
+    margin-left:35vw;
+    text-align: right;
+    color: white;
+  
+  }
+  #register {
+    font-family: 'Trueno';
+    margin-top: 20px;
+    position: absolute;
+    right: 0px;
+    left:35vw;
+  }
+  #tagline {
+    font-family: 'Trueno';
+    font-weight: bold;
+    text-align: right;
+    margin-left:220px;
+    margin-top:-5px;
+    width: 400px;
+    font-size:1.8em;
+  }
+  .times{
+    font-size:1.5em;
+    margin-left: 15vw;
+    text-align:right;
+
+  } 
 }
