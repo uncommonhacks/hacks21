@@ -450,6 +450,11 @@ on diffrent interval using keyframe*/
     color: white;
 
   }
+  #subtitle{
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+  }
   .year{
     font-size: 4em;
     text-align: right;
@@ -457,9 +462,12 @@ on diffrent interval using keyframe*/
   }
   #year {
     font-size: 1.6em;
+    color: white;
   }
   #register {
-    float:right;
+    right: 0;
+    position: fixed;
+    bottom: 5px;
   }
   .clickable_button {
     width: 190px;
@@ -483,8 +491,8 @@ on diffrent interval using keyframe*/
     width: 100%;
   }
   #intro{
-    background-size: 220%;
-    height:120vw;
+    background-size: cover;
+    height:100%;
     background-repeat: no-repeat;
   }
   .rain:before { 
