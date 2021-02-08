@@ -62,9 +62,44 @@ on diffrent interval using keyframe*/
     filter: hue-rotate(360deg); 
   } 
 } 
+@keyframes glitchAni{
+  0%{
+  opacity: .50;
+  transform: rotate(-3deg) skew(7deg, 7deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  }
+  2%{
+  opacity: .10;
+  transform: skew(-7deg, -7deg) translate(15px,15px);
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  }
+  3%{
+  opacity: 1;
+  transform: skew(-7deg, -7deg) rotate(0deg);
+  }
+  4%{
+  transform: skew(0deg, 0deg) rotate(0deg) translate(2px,2px);
+  }
+  5%{
+    transform: translate(0px,0px);
+  }
+}
 
-
-
+@keyframes noise-anim {
+  0% {
+    clip-path: inset(100px 50px);
+  }
+  20% {
+    clip-path: inset(92% 1%);
+  }
+  
+}
 @font-face {
   font-family: 'Neon';
   src: url('fonts/Neon.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
@@ -87,6 +122,10 @@ on diffrent interval using keyframe*/
   font-family: 'Trueno Reg';
   src: url('fonts/TruenoRg.otf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }  
+
+.glitch{
+  animation: glitchAni 5s linear infinite;
+}
 .contact{
   width: 60px;
 }
@@ -179,6 +218,10 @@ on diffrent interval using keyframe*/
 .year{
   font-family: 'Neon';
 }
+.yearSpans{
+  float: right;
+}
+
 #sponsors {
   text-align: center;
   display: flex;
@@ -402,12 +445,12 @@ on diffrent interval using keyframe*/
     margin-top:-20px;
     text-align:right;
     color: white;
+
   }
   .year{
     font-size: 4em;
     text-align: right;
     color: white;
-  
   }
   #year {
     font-size: 1.6em;
@@ -479,45 +522,45 @@ div{
     background-repeat: no-repeat;
   }  
   .uncommon {
-    font-size: 10vw;
+    font-size: 750%;
     text-align: right;
     margin-left:70px;
     color: white;
     margin-top: 100px;
   }
   .hacks {
-    font-size: 11vw;
-    margin-top: -6vw;
-    margin-left: 340px;
+    font-size: 750%;
+    margin-top: -5vw;
+    margin-left: 440px;
     color: white;
   }
   .year{
-    font-size: 9vw;
+    font-size: 750%;
     margin-top:-4vw;
-    margin-left:35vw;
+    margin-left:20vw;
     text-align: right;
     color: white;
-  
   }
+
   #register {
     font-family: 'Trueno';
     margin-top: 20px;
     position: absolute;
     right: 0px;
-    left:35vw;
+    left:25vw;
   }
   #tagline {
     font-family: 'Trueno';
     font-weight: bold;
     text-align: right;
-    margin-left:220px;
+    margin-left:19vw;
     margin-top:-5px;
     width: 400px;
     font-size:1.8em;
   }
   .times{
     font-size:1.5em;
-    margin-left: 15vw;
+    margin-left: -35%;
     text-align:right;
 
   } 

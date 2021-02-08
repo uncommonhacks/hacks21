@@ -1,3 +1,5 @@
+var clicked = false;
+
 let updateSticky = function () {
   if (window.innerWidth < 951) {
     let lefts = document.querySelectorAll(".left");
@@ -46,3 +48,27 @@ let updateSticky = function () {
 
 window.onload = function () { updateSticky(); };
 window.onresize = function () { updateSticky(); };
+window.addEventListener("click", event => {
+  if(!clicked){
+    const rain = document.getElementById("rainSounds");
+    rain.volume = 0.2;
+    rain.play();
+    rain.loop = true
+    const neon = document.getElementById("neonSounds");
+    neon.volume = 1;
+    neon.play();
+    var a = setInterval(function(){turnNeonOff(neon,a)}, 200)
+    neon.loop= true;
+  }
+  clicked = true;
+});
+function turnNeonOff(neon,a){
+  if(neon.volume > -10){
+    neon.volume = Math.max(neon.volume*0.96,0.1)
+  }
+  else{
+    clearInterval(a)
+    console.log(a)
+  }
+}
+
