@@ -48,6 +48,7 @@ let updateSticky = function () {
 
 window.onload = function () { updateSticky(); };
 window.onresize = function () { updateSticky(); };
+window.addEventListener('blur', function(){neon.mute = true, rain.mute = true})
 window.addEventListener("click", event => {
   if(!clicked){
     const rain = document.getElementById("rainSounds");
