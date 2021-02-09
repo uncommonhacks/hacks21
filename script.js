@@ -1,5 +1,5 @@
 var clicked = false;
-
+var navigatedAway = false;
 let updateSticky = function () {
   if (window.innerWidth < 951) {
     let lefts = document.querySelectorAll(".left");
@@ -48,7 +48,14 @@ let updateSticky = function () {
 
 window.onload = function () { updateSticky(); };
 window.onresize = function () { updateSticky(); };
-window.addEventListener('blur', function(){neon.mute = true, rain.mute = true})
+window.addEventListener('blur', function(){
+            document.getElementById("rainSounds").muted = true; 
+            document.getElementById("neonSounds").muted = true;
+          })
+window.addEventListener('focus', function(){
+            document.getElementById("rainSounds").muted = false; 
+            document.getElementById("neonSounds").muted = false;
+          })
 window.addEventListener("click", event => {
   if(!clicked){
     const rain = document.getElementById("rainSounds");
