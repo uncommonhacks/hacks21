@@ -178,7 +178,7 @@ on diffrent interval using keyframe*/
 .nonintro {
   text-align: left;
 }
-.times{
+.otherinfo{
   color:rgb(5, 167, 241);
   font-family: "Trueno Reg";
   display: block;
@@ -358,7 +358,7 @@ on diffrent interval using keyframe*/
   .subnonintro {
     font-size: 1.2em;
   }
-  .times{
+  .otherinfo{
     font-size:2em;
     width:45vw;
     margin-top:10px;
@@ -416,9 +416,6 @@ on diffrent interval using keyframe*/
     grid-template-rows: 50vh auto;
     grid-template-columns: 100vw;
   }
-  .rain:before { 
-    visibility: hidden;
-  }
   .left {
     width: 100vw;
     order: 1;
@@ -450,11 +447,6 @@ on diffrent interval using keyframe*/
     color: white;
 
   }
-  #subtitle{
-    position: fixed;
-    bottom: 40px;
-    right: 10px;
-  }
   .year{
     font-size: 4em;
     text-align: right;
@@ -462,12 +454,9 @@ on diffrent interval using keyframe*/
   }
   #year {
     font-size: 1.6em;
-    color: white;
   }
   #register {
-    right: 0;
-    position: fixed;
-    bottom: 5px;
+    float:right;
   }
   .clickable_button {
     width: 190px;
@@ -491,19 +480,22 @@ on diffrent interval using keyframe*/
     width: 100%;
   }
   #intro{
-    background-size: cover;
-    height:100%;
+    background-size: 220%;
+    height:120vw;
     background-repeat: no-repeat;
   }
   .rain:before { 
     width: 100%; 
   }
-  .times {
+  .otherinfo {
     font-family: 'Trueno Reg';
     font-weight: bold;
     font-size: 1em;
     text-align: right;
     margin-left: -50px;
+    color:rgb(5, 167, 241);
+    font-family: "Trueno Reg";
+    display: block;
   }
   .subinfo{
     text-align: center;
@@ -540,15 +532,18 @@ div{
     margin-top: 100px;
   }
   .hacks {
+    position:relative;
     font-size: 750%;
     margin-top: -5vw;
     margin-left: 440px;
     color: white;
+    z-index: 10;
   }
   .year{
+    position:relative;
     font-size: 750%;
-    margin-top:-4vw;
-    margin-left:20vw;
+    margin-top:-16vh;
+    margin-left:14vw;
     text-align: right;
     color: white;
   }
@@ -556,26 +551,23 @@ div{
   #register {
     font-family: 'Trueno';
     margin-top: 20px;
-    position: absolute;
-    right: 0px;
-    left:25vw;
+    margin-left:-20vw;
   }
   #tagline {
     font-family: 'Trueno';
     font-weight: bold;
-    text-align: right;
-    margin-left:19vw;
+    text-align: left;
+    margin-left:11vw;
     margin-top:-5px;
-    width: 400px;
+    width: 30vw;
     font-size:1.8em;
   }
-  .times{
+  .otherinfo{
+    margin-top: 13vh;
     font-size:1.5em;
-    margin-left: -35%;
-    text-align:right;
-
-  } 
-  .rain:before { 
-    visibility: hidden;
+    margin-left: 8vw;
+    text-align:left;
+    width:100vw;
   }
+
 }
