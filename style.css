@@ -35,6 +35,7 @@ https://media.geeksforgeeks.org/wp-content/uploads/20200828184536/download-200x2
 http://pngimg.com/uploads/rain/small/rain_PNG13466.png); 
   animation: rain 1s linear infinite; 
   opacity: 0.0; 
+  visibility: hidden;
 } 
 /* just changing the position of image 
 of rain using keyframes*/ 
