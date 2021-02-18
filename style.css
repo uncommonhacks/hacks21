@@ -127,8 +127,17 @@ on diffrent interval using keyframe*/
 .glitch{
   animation: glitchAni 5s linear infinite;
 }
+.abt{
+  font-family: 'Gris';
+}
 .contact{
   width: 60px;
+}
+.contact2{
+  width: 90px;
+}
+.contact3{
+  width: 70px;
 }
 .email-link {
   color: white;
@@ -228,7 +237,7 @@ on diffrent interval using keyframe*/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #0b0324;
+  background-color: #090f10;
 }
 #sponsor-content {
   display: block;
@@ -291,19 +300,26 @@ on diffrent interval using keyframe*/
   max-height: 100px;
 }
 #sponsor-title {
-  font-family: 'Courier';
-  font-weight: bold;
+  font-family: 'Gris';
+  font-weight: normal;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 #sponsor-us {
-  font-family: 'Courier';
+  font-family: 'Trueno Reg';
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
 }
 @media (min-width: 951px) {
+  #astronaut{
+    max-width: 80vw;
+  }
+  #gamer{
+    max-width: 80vw;
+  }
+
   .left {
     padding-right: 10px;
     padding-left: 10px;
@@ -358,6 +374,9 @@ on diffrent interval using keyframe*/
   }
   .subnonintro {
     font-size: 1.2em;
+    font-family: 'Trueno Reg';
+    font-weight: normal;
+    text-align: justify;
   }
   .times{
     font-size:2em;
@@ -409,6 +428,18 @@ on diffrent interval using keyframe*/
   }
 }
 @media (max-width: 950px) {
+  #astronaut{
+    max-height: 50vh;
+  }
+  #astronaut img{
+    margin: 0px -300px 0px 0px;
+  }
+  #gamer{
+    max-height: 50vh;
+  }
+  #gamer img {
+    margin: 0px -200px 0px 0px;
+}
   .section-left, .section-right {
     display: grid;
     grid-template-areas:
@@ -524,6 +555,7 @@ div{
   }
   #sponsor-us {
     margin-top: 100px;
+    font-family: 'Trueno Reg';
   }
 }
 
@@ -579,4 +611,10 @@ div{
   .rain:before { 
     visibility: hidden;
   }
+  #gamer{
+    max-height: 50vh;
+  }
+  #gamer img {
+    margin: 0px -200px 0px 0px;
+}
 }
