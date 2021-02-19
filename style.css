@@ -11,15 +11,21 @@ html, body {
   min-width:100%;
 }
 
+.shadowfilter {
+  filter: drop-shadow(0px 0px 2px rgb(0, 147, 192));
+
+}
+
+.strokefilter{
+  filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+}
 a {
   text-decoration: none;
 }
 
 .rain { 
-  background-image: url( 
-https://media.geeksforgeeks.org/wp-content/uploads/20200828184536/download-200x200.png); 
   background-size: cover; 
-  width: 50%;
+  width: 100%;
   animation: color-change 10s linear infinite; 
   animation-delay: 1s; 
 } 
@@ -29,7 +35,7 @@ https://media.geeksforgeeks.org/wp-content/uploads/20200828184536/download-200x2
   position: absolute; 
   top: 0; 
   left: 0; 
-  width: 45%; 
+  width: 100%; 
   height: 100%; 
   background-image: url( 
 http://pngimg.com/uploads/rain/small/rain_PNG13466.png); 
@@ -204,7 +210,7 @@ on diffrent interval using keyframe*/
   margin-bottom: 5px;
 }
 .clickable_button {
-  width: 278px;
+  width: 240px;
   text-align: center;
   padding: 15px 0;
   margin-left: auto;
@@ -297,7 +303,13 @@ on diffrent interval using keyframe*/
     position: relative;
 }
 #sponsor-jpm {
-  max-height: 100px;
+  max-height: 200px;
+}
+#sponsor-silver {
+  max-height: 150px;
+}
+#sponsor-bronze {
+  max-height: 30px;
 }
 #sponsor-title {
   font-family: 'Gris';
@@ -318,6 +330,10 @@ on diffrent interval using keyframe*/
   }
   #gamer{
     max-width: 80vw;
+    padding-top: 0px;
+    margin-left: 0px;
+    padding-bottom: 0px;
+    margin-bottom: auto;
   }
 
   .left {
@@ -407,7 +423,7 @@ on diffrent interval using keyframe*/
   
   }
   .title {
-    font-size: 3.5em;
+    font-size: 4em;
     letter-spacing: 0.1em;
   }
   #year {
@@ -418,7 +434,14 @@ on diffrent interval using keyframe*/
     margin-top: 20px;
     position: absolute;
     right: 0px;
-    left:28vw;
+    left:32vw;
+  }
+  #register2 {
+    font-family: 'Trueno Reg';
+    margin-top: 20px;
+    position: absolute;
+    right: 0px;
+    left:12vw;
   }
   #tagline {
     font-family: 'Trueno';
@@ -501,11 +524,17 @@ on diffrent interval using keyframe*/
     position: fixed;
     bottom: 5px;
   }
+  #register2 {
+    right: 160px;
+    position: fixed;
+    bottom: 5px;
+  }
   .clickable_button {
-    width: 190px;
+    width: 150px;
     text-align: center;
     margin-top: 10px;
     padding: 5px 0;
+    font-size: 12px;
     margin-left: auto;
     margin-right: auto;
     background: #81d8fa;
