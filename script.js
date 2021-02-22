@@ -77,6 +77,7 @@ function turnNeonOff(neon, a) {
   }
 }
 
+<<<<<<< HEAD
 let headShotsList = [
   "img/headshots/angelaSerious.png",
   "img/headshots/angelaShaSerious.png",
@@ -110,4 +111,18 @@ setInterval(() => {
   currentPicture =
     currentPicture == headShotsList.length - 1 ? 0 : currentPicture + 1;
   headShot.setAttribute("src", headShotsList[currentPicture]);
+=======
+let headShots = [
+  "img/headshots/1.jpeg",
+  "img/headshots/2.jpeg",
+  "img/headshots/3.jpeg",
+];
+let currentPicture = 0;
+let headShot = document.getElementById("headshots");
+
+setInterval(() => {
+  currentPicture =
+    currentPicture == headShots.length - 1 ? 0 : currentPicture + 1;
+  headShot.setAttribute("src", headShots[currentPicture]);
+>>>>>>> refs/remotes/origin/main
 }, 2000);
