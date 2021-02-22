@@ -1,100 +1,99 @@
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   color: white;
   background: black;
   height: 100%;
 
-  overflow-x:hidden;
-  width:100%;
-  max-width:100%;
-  min-width:100%;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .shadowfilter {
   filter: drop-shadow(0px 0px 2px rgb(0, 147, 192));
-
 }
 
-.strokefilter{
+.strokefilter {
   filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
 }
 a {
   text-decoration: none;
 }
 
-.rain { 
-  background-size: cover; 
+.rain {
+  background-size: cover;
   width: 100%;
-  animation: color-change 10s linear infinite; 
-  animation-delay: 1s; 
-} 
-/*adding rain img and making opacity 0*/ 
-.rain:before { 
-  content: ""; 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background-image: url( 
-http://pngimg.com/uploads/rain/small/rain_PNG13466.png); 
-  animation: rain 1s linear infinite; 
-  opacity: 0.0; 
+  animation: color-change 10s linear infinite;
+  animation-delay: 1s;
+}
+/*adding rain img and making opacity 0*/
+.rain:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://pngimg.com/uploads/rain/small/rain_PNG13466.png);
+  animation: rain 1s linear infinite;
+  opacity: 0;
   visibility: hidden;
-} 
+}
 /* just changing the position of image 
-of rain using keyframes*/ 
-@keyframes rain { 
-  0% { 
-    background-position: 0 0; 
-    opacity: 1; 
-  } 
+of rain using keyframes*/
+@keyframes rain {
+  0% {
+    background-position: 0 0;
+    opacity: 1;
+  }
 
-  100% { 
-    background-position: 0% 80%; 
-    opacity: 1; 
-  } 
-} 
+  100% {
+    background-position: 0% 80%;
+    opacity: 1;
+  }
+}
 /* applying filter at different angle 
-on diffrent interval using keyframe*/ 
-@keyframes color-change { 
-  0% { 
-    filter: hue-rotate(0deg); 
-  } 
-  50% { 
-    filter: hue-rotate(0deg); 
-  } 
-  100% { 
-    filter: hue-rotate(360deg); 
-  } 
-} 
-@keyframes glitchAni{
-  0%{
-  opacity: .50;
-  transform: rotate(-3deg) skew(7deg, 7deg);
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
+on diffrent interval using keyframe*/
+@keyframes color-change {
+  0% {
+    filter: hue-rotate(0deg);
   }
-  2%{
-  opacity: .10;
-  transform: skew(-7deg, -7deg) translate(15px,15px);
-  -webkit-transform: rotate(3deg);
-  -moz-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  -o-transform: rotate(3deg);
+  50% {
+    filter: hue-rotate(0deg);
   }
-  3%{
-  opacity: 1;
-  transform: skew(-7deg, -7deg) rotate(0deg);
+  100% {
+    filter: hue-rotate(360deg);
   }
-  4%{
-  transform: skew(0deg, 0deg) rotate(0deg) translate(2px,2px);
+}
+@keyframes glitchAni {
+  0% {
+    opacity: 0.5;
+    transform: rotate(-3deg) skew(7deg, 7deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
   }
-  5%{
-    transform: translate(0px,0px);
+  2% {
+    opacity: 0.1;
+    transform: skew(-7deg, -7deg) translate(15px, 15px);
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+  }
+  3% {
+    opacity: 1;
+    transform: skew(-7deg, -7deg) rotate(0deg);
+  }
+  4% {
+    transform: skew(0deg, 0deg) rotate(0deg) translate(2px, 2px);
+  }
+  5% {
+    transform: translate(0px, 0px);
   }
 }
 
@@ -105,44 +104,43 @@ on diffrent interval using keyframe*/
   20% {
     clip-path: inset(92% 1%);
   }
-  
 }
 @font-face {
-  font-family: 'Neon';
-  src: url('fonts/Neon.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+  font-family: "Neon";
+  src: url("fonts/Neon.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 @font-face {
-  font-family: 'Gris';
-  src: url('fonts/Acier-TextGris.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+  font-family: "Gris";
+  src: url("fonts/Acier-TextGris.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 @font-face {
-  font-family: 'Las';
-  src: url('fonts/LasEnterPersonalUseOnly-D301.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+  font-family: "Las";
+  src: url("fonts/LasEnterPersonalUseOnly-D301.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 @font-face {
-  font-family: 'Trueno Lite';
-  src: url('fonts/TruenoRgIt.otf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+  font-family: "Trueno Lite";
+  src: url("fonts/TruenoRgIt.otf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 @font-face {
-  font-family: 'Trueno Reg';
-  src: url('fonts/TruenoRg.otf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+  font-family: "Trueno Reg";
+  src: url("fonts/TruenoRg.otf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
-.glitch{
+.glitch {
   animation: glitchAni 5s linear infinite;
 }
-.abt{
-  font-family: 'Gris';
+.abt {
+  font-family: "Gris";
 }
-.contact{
+.contact {
   width: 60px;
 }
-.contact2{
+.contact2 {
   width: 90px;
 }
-.contact3{
+.contact3 {
   width: 70px;
 }
 .email-link {
@@ -162,8 +160,7 @@ on diffrent interval using keyframe*/
 }
 .section-right {
   display: grid;
-  grid-template-areas:
-  "room content";
+  grid-template-areas: "room content";
   grid-template-columns: calc(75vw - 278px) calc(25vw + 278px);
 }
 .left {
@@ -171,7 +168,7 @@ on diffrent interval using keyframe*/
   grid-area: "room";
   align-self: center;
 }
-.sticky{
+.sticky {
   align-self: flex-start;
   margin-top: 20vh;
   margin-bottom: 20vh;
@@ -179,14 +176,13 @@ on diffrent interval using keyframe*/
   bottom: 40%;
   position: -webkit-sticky;
   position: sticky;
-  
 }
 .room {
   max-width: 80%;
   max-height: 90vh;
 }
 .right {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-weight: 300;
   text-align: left;
   grid-area: "content";
@@ -194,8 +190,8 @@ on diffrent interval using keyframe*/
 .nonintro {
   text-align: left;
 }
-.times{
-  color:rgb(5, 167, 241);
+.times {
+  color: rgb(5, 167, 241);
   font-family: "Trueno Reg";
   display: block;
 }
@@ -218,23 +214,24 @@ on diffrent interval using keyframe*/
   background: #81d8fa;
   color: white;
   font-weight: 600;
-  border-radius:25px;
+  border-radius: 25px;
   cursor: pointer;
 }
-.glow{
-  text-shadow: 0 0 4px rgb(5, 167, 241), 0 0 6px rgb(7, 150, 150), 0 0 10px #5ec3e2, 0 0 10px #0073e6, 0 0 20px #0073e6, 0 0 15px #0073e6, 0 0 18px #0073e6;
+.glow {
+  text-shadow: 0 0 4px rgb(5, 167, 241), 0 0 6px rgb(7, 150, 150),
+    0 0 10px #5ec3e2, 0 0 10px #0073e6, 0 0 20px #0073e6, 0 0 15px #0073e6,
+    0 0 18px #0073e6;
 }
 .uncommon {
-  font-family: 'Gris';
-
+  font-family: "Gris";
 }
 .hacks {
-  font-family: 'Las';
+  font-family: "Las";
 }
-.year{
-  font-family: 'Neon';
+.year {
+  font-family: "Neon";
 }
-.yearSpans{
+.yearSpans {
   float: right;
 }
 
@@ -255,15 +252,13 @@ on diffrent interval using keyframe*/
   margin-top: 10px;
 }
 #intro {
-  background-color:#090f10;
-  background-image: url('img/home.png');
+  background-color: #090f10;
+  background-image: url("img/home.png");
   background-size: contain;
   background-repeat: no-repeat;
-
 }
 #about {
   background-color: #090f10;
-  
 }
 #faq {
   background-color: #090f10;
@@ -273,17 +268,17 @@ on diffrent interval using keyframe*/
   padding-top: 30px;
 }
 #schedule {
-  background-color:#090f10;
+  background-color: #090f10;
 }
 #mlh-trust-badge {
-  display:block;
-  max-width:50px;
-  min-width:48px;
-  position:absolute;
-  right:10px;
-  top:0;
-  width:10%;
-  z-index:10000;
+  display: block;
+  max-width: 50px;
+  min-width: 48px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 10%;
+  z-index: 10000;
 }
 #tagline {
   font-family: "Trueno Lite";
@@ -293,14 +288,14 @@ on diffrent interval using keyframe*/
   color: white;
 }
 .sponsor-img {
-    max-height: 70px;
-    max-width: calc(100% - 80px);
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    opacity: 1;
-    position: relative;
+  max-height: 70px;
+  max-width: calc(100% - 80px);
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 1;
+  position: relative;
 }
 #sponsor-jpm {
   max-height: 200px;
@@ -312,23 +307,23 @@ on diffrent interval using keyframe*/
   max-height: 30px;
 }
 #sponsor-title {
-  font-family: 'Gris';
+  font-family: "Gris";
   font-weight: normal;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 #sponsor-us {
-  font-family: 'Trueno Reg';
+  font-family: "Trueno Reg";
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
 }
 @media (min-width: 951px) {
-  #astronaut{
+  #astronaut {
     max-width: 80vw;
   }
-  #gamer{
+  #gamer {
     max-width: 80vw;
     padding-top: 0px;
     margin-left: 0px;
@@ -344,15 +339,13 @@ on diffrent interval using keyframe*/
   #intro {
     min-height: 100vh;
     display: grid;
-    grid-template-areas:
-      "room content";
+    grid-template-areas: "room content";
     grid-template-columns: calc(90vw - 446px) calc(10vw + 446px);
   }
   #schedule {
     min-height: 100vh;
     display: grid;
-    grid-template-areas:
-      "room content";
+    grid-template-areas: "room content";
     grid-template-columns: calc(65vw - 278px) calc(35vw + 278px);
   }
   #schedule .room {
@@ -384,22 +377,21 @@ on diffrent interval using keyframe*/
     padding-bottom: 50px;
   }
   .subinfo {
-    font-family: 'Trueno Reg';
+    font-family: "Trueno Reg";
     font-weight: bold;
     font-size: 1.3em;
   }
   .subnonintro {
     font-size: 1.2em;
-    font-family: 'Trueno Reg';
+    font-family: "Trueno Reg";
     font-weight: normal;
     text-align: justify;
   }
-  .times{
-    font-size:2em;
-    width:45vw;
-    margin-top:10px;
-    text-align:right;
-
+  .times {
+    font-size: 2em;
+    width: 45vw;
+    margin-top: 10px;
+    text-align: right;
   }
   .room {
     margin-top: auto;
@@ -416,11 +408,10 @@ on diffrent interval using keyframe*/
     margin-left: 330px;
     color: white;
   }
-  .year{
+  .year {
     font-size: 9vw;
     margin-top: -150px;
     color: white;
-  
   }
   .title {
     font-size: 4em;
@@ -430,48 +421,49 @@ on diffrent interval using keyframe*/
     font-size: 2.8em;
   }
   #register {
-    font-family: 'Trueno Reg';
+    font-family: "Trueno Reg";
     margin-top: 20px;
     position: absolute;
     right: 0px;
-    left:32vw;
+    left: 32vw;
   }
   #register2 {
-    font-family: 'Trueno Reg';
+    font-family: "Trueno Reg";
     margin-top: 20px;
     position: absolute;
     right: 0px;
-    left:12vw;
+    left: 12vw;
   }
   #tagline {
-    font-family: 'Trueno';
+    font-family: "Trueno";
     font-weight: bold;
     text-align: right;
-    font-size:1.8em;
+    font-size: 1.8em;
   }
 }
 @media (max-width: 950px) {
-  #astronaut{
+  #astronaut {
     max-height: 50vh;
   }
-  #astronaut img{
+  #astronaut img {
     margin: 0px -300px 0px 0px;
   }
-  #gamer{
+  #gamer {
     max-height: 50vh;
   }
   #gamer img {
     margin: 0px -200px 0px 0px;
-}
-  .section-left, .section-right {
+  }
+  .section-left,
+  .section-right {
     display: grid;
     grid-template-areas:
-    "room"
-    "content";
+      "room"
+      "content";
     grid-template-rows: 50vh auto;
     grid-template-columns: 100vw;
   }
-  .rain:before { 
+  .rain:before {
     visibility: hidden;
   }
   .left {
@@ -496,21 +488,20 @@ on diffrent interval using keyframe*/
     font-size: 3em;
     color: white;
     text-align: right;
-    margin-top:50px;
+    margin-top: 50px;
   }
   .hacks {
     font-size: 4em;
-    margin-top:-20px;
-    text-align:right;
+    margin-top: -20px;
+    text-align: right;
     color: white;
-
   }
-  #subtitle{
+  #subtitle {
     position: fixed;
     bottom: 40px;
     right: 10px;
   }
-  .year{
+  .year {
     font-size: 4em;
     text-align: right;
     color: white;
@@ -540,7 +531,7 @@ on diffrent interval using keyframe*/
     background: #81d8fa;
     color: white;
     font-weight: 600;
-    border-radius:20px;
+    border-radius: 20px;
     cursor: pointer;
   }
   .room {
@@ -551,53 +542,54 @@ on diffrent interval using keyframe*/
     font-size: 20px;
     width: 100%;
   }
-  #intro{
+  #intro {
     background-size: cover;
-    height:100%;
+    height: 100%;
     background-repeat: no-repeat;
   }
-  .rain:before { 
-    width: 100%; 
+  .rain:before {
+    width: 100%;
   }
   .times {
-    font-family: 'Trueno Reg';
+    font-family: "Trueno Reg";
     font-weight: bold;
     font-size: 1em;
     text-align: right;
     margin-left: -50px;
   }
-  .subinfo{
+  .subinfo {
     text-align: center;
-    width:100%;
+    width: 100%;
   }
-  .otherinfo{
+  .otherinfo {
     margin-left: auto;
     margin-right: auto;
   }
 }
-div{
+div {
   color: white;
 }
 @media (min-width: 550px) {
-  #sponsor-jpm, #sponsor-morningstar {
+  #sponsor-jpm,
+  #sponsor-morningstar {
     min-height: 60px;
   }
   #sponsor-us {
     margin-top: 100px;
-    font-family: 'Trueno Reg';
+    font-family: "Trueno Reg";
   }
 }
 
-@media (min-width: 1024px) and (min-height: 768px){
-  #intro{
+@media (min-width: 1024px) and (min-height: 768px) {
+  #intro {
     background-size: cover;
-    height:100%;
+    height: 100%;
     background-repeat: no-repeat;
-  }  
+  }
   .uncommon {
     font-size: 750%;
     text-align: right;
-    margin-left:70px;
+    margin-left: 70px;
     color: white;
     margin-top: 100px;
   }
@@ -607,43 +599,49 @@ div{
     margin-left: 440px;
     color: white;
   }
-  .year{
+  .year {
     font-size: 750%;
-    margin-top:-4vw;
-    margin-left:20vw;
+    margin-top: -4vw;
+    margin-left: 20vw;
     text-align: right;
     color: white;
   }
 
   #register {
-    font-family: 'Trueno Reg';
+    font-family: "Trueno Reg";
     margin-top: 20px;
     position: absolute;
     right: 0px;
-    left:25vw;
+    left: 25vw;
   }
   #tagline {
-    font-family: 'Trueno';
+    font-family: "Trueno";
     font-weight: bold;
     text-align: right;
-    margin-left:19vw;
-    margin-top:-5px;
+    margin-left: 19vw;
+    margin-top: -5px;
     width: 400px;
-    font-size:1.8em;
+    font-size: 1.8em;
   }
-  .times{
-    font-size:1.5em;
+  .times {
+    font-size: 1.5em;
     margin-left: -35%;
-    text-align:right;
-
-  } 
-  .rain:before { 
+    text-align: right;
+  }
+  .rain:before {
     visibility: hidden;
   }
-  #gamer{
+  #gamer {
     max-height: 50vh;
   }
   #gamer img {
     margin: 0px -200px 0px 0px;
+  }
 }
+.headshots {
+  height: 80vh;
+  margin-left: 5%;
+}
+.members-link {
+  display: inline;
 }

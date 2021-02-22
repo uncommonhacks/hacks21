@@ -34,7 +34,7 @@ let updateSticky = function () {
     // Use sticky to get the images to stay centered
     if (right.clientHeight > window.innerHeight) {
       let img = left.children[0];
-      let offset = window.innerHeight/2 - img.clientHeight/2 + "px";
+      let offset = window.innerHeight / 2 - img.clientHeight / 2 + "px";
 
       left.style.position = "sticky";
       left.style.position = "-webkit-sticky";
@@ -46,29 +46,68 @@ let updateSticky = function () {
   }
 };
 
-window.onload = function () { updateSticky(); };
-window.onresize = function () { updateSticky(); };
-window.addEventListener("click", event => {
-  if(!clicked){
+window.onload = function () {
+  updateSticky();
+};
+window.onresize = function () {
+  updateSticky();
+};
+window.addEventListener("click", (event) => {
+  if (!clicked) {
     const rain = document.getElementById("rainSounds");
     rain.volume = 0.2;
     rain.play();
-    rain.loop = true
+    rain.loop = true;
     const neon = document.getElementById("neonSounds");
     neon.volume = 1;
     neon.play();
-    var a = setInterval(function(){turnNeonOff(neon,a)}, 200)
-    neon.loop= true;
+    var a = setInterval(function () {
+      turnNeonOff(neon, a);
+    }, 200);
+    neon.loop = true;
   }
   clicked = true;
 });
-function turnNeonOff(neon,a){
-  if(neon.volume > -10){
-    neon.volume = Math.max(neon.volume*0.96,0.1)
-  }
-  else{
-    clearInterval(a)
-    console.log(a)
+function turnNeonOff(neon, a) {
+  if (neon.volume > -10) {
+    neon.volume = Math.max(neon.volume * 0.96, 0.1);
+  } else {
+    clearInterval(a);
+    console.log(a);
   }
 }
 
+let headShotsList = [
+  "img/headshots/angelaSerious.png",
+  "img/headshots/angelaShaSerious.png",
+  "img/headshots/anneSerious.png",
+  "img/headshots/antonSerious.png",
+  "img/headshots/christianSerious.jpg",
+  "img/headshots/dashaSerious.png",
+  "img/headshots/jimSerious.jpg",
+  "img/headshots/joeSerious.png",
+  "img/headshots/kateSerious.jpg",
+  "img/headshots/nickSerious.png",
+  "img/headshots/thomasSerious.png",
+  "img/headshots/reneeSerious.png",
+  "img/headshots/samanthaSerious.jpg",
+  "img/headshots/spencerSerious.png",
+];
+
+console.log(headShotsList);
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+let currentPicture = getRandomInt(headShotsList.length);
+console.log(currentPicture);
+console.log(headShotsList[currentPicture]);
+let headShot = document.getElementById("headshots");
+
+headShot.setAttribute("src", headShotsList[currentPicture]);
+setInterval(() => {
+  currentPicture =
+    currentPicture == headShotsList.length - 1 ? 0 : currentPicture + 1;
+  headShot.setAttribute("src", headShotsList[currentPicture]);
+}, 2000);
