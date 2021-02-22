@@ -94,15 +94,11 @@ let headShotsList = [
   "img/headshots/spencerSerious.png",
 ];
 
-console.log(headShotsList);
-
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
 let currentPicture = getRandomInt(headShotsList.length);
-console.log(currentPicture);
-console.log(headShotsList[currentPicture]);
 let headShot = document.getElementById("headshots");
 
 headShot.setAttribute("src", headShotsList[currentPicture]);
