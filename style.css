@@ -322,7 +322,6 @@ on diffrent interval using keyframe*/
 @media (min-width: 951px) {
   
 #meetTeam{
-  visibility: hidden;
 }
 .headshots {
   height: 40vh;
