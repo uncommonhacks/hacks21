@@ -637,7 +637,6 @@ div {
   #gamer img {
     margin: 0px -200px 0px 0px;
   }
-<<<<<<< HEAD
 }
 .headshots {
   height: 80vh;
@@ -645,10 +644,4 @@ div {
 }
 .members-link {
   display: inline;
-=======
-}
-.headshots {
-  height: 80vh;
-  margin-left: 5%;
->>>>>>> refs/remotes/origin/main
 }
