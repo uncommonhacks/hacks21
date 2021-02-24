@@ -320,13 +320,12 @@ on diffrent interval using keyframe*/
   margin-right: auto;
 }
 @media (min-width: 951px) {
-  
-#meetTeam{
-}
-.headshots {
-  height: 40vh;
-  width: 40vh;
-  margin-left: -20vh !important; 
+  #meetTeam {
+  }
+  .headshots {
+    height: 40vh;
+    width: 40vh;
+    margin-left: -20vh !important;
   }
   #astronaut {
     max-width: 80vw;
@@ -450,7 +449,6 @@ on diffrent interval using keyframe*/
   }
 }
 @media (max-width: 950px) {
-
   #astronaut {
     max-height: 50vh;
   }
@@ -580,10 +578,10 @@ div {
 }
 @media (min-width: 550px) {
   .headshots {
-  height: 30vw;
-  width: 30vw;
-  margin-left: 35vw;
-}
+    height: 30vw;
+    width: 30vw;
+    margin-left: 35vw;
+  }
   #sponsor-jpm,
   #sponsor-morningstar {
     min-height: 60px;
@@ -601,9 +599,9 @@ div {
     background-repeat: no-repeat;
   }
   .headshots {
-  height: 60vh;
-  width: 60vh;
-  margin-left: -0vh;
+    height: 60vh;
+    width: 60vh;
+    margin-left: -0vh;
   }
   .uncommon {
     font-size: 750%;
@@ -659,10 +657,14 @@ div {
 }
 
 .members-link {
-  display: inline;
+  display: block;
 }
+
 .headshots {
-  height: 30vw;
-  width: 30vw;
-  margin-left: 35vw;
+  height: 40vw;
+  width: 40vw;
+  display: flex;
+  float: right;
+  justify-content: center;
+  margin-right: 28%;
 }
