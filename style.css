@@ -320,6 +320,12 @@ on diffrent interval using keyframe*/
   margin-right: auto;
 }
 @media (min-width: 951px) {
+  #faq_image{
+    width: 100vw;
+    margin-left: -40vw;
+
+
+  }
   #meetTeam {
   }
   .headshots {
@@ -460,6 +466,12 @@ on diffrent interval using keyframe*/
   }
   #gamer img {
     margin: 0px -200px 0px 0px;
+  }
+  #faq_image{
+    width: 100vw;
+    margin-left: -13vw;
+
+
   }
   .section-left,
   .section-right {
