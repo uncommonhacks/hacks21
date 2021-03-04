@@ -304,7 +304,10 @@ on diffrent interval using keyframe*/
   max-height: 150px;
 }
 #sponsor-bronze {
-  max-height: 30px;
+  width: 200px;
+}
+#sponsor-bronze-2 {
+  width: 180px;
 }
 #sponsor-title {
   font-family: "Gris";
