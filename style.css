@@ -300,14 +300,18 @@ on diffrent interval using keyframe*/
 #sponsor-jpm {
   max-height: 200px;
 }
-#sponsor-silver {
-  max-height: 150px;
+#sponsor-silver-2 {
+  width: 300px !important;
 }
 #sponsor-bronze {
   width: 200px;
 }
 #sponsor-bronze-2 {
   width: 180px;
+}
+#sponsor-bronze-4 {
+  width: 220px;
+  height: auto;
 }
 
 #sponsor-title {
