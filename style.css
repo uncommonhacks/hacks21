@@ -309,9 +309,13 @@ on diffrent interval using keyframe*/
 #sponsor-bronze-2 {
   width: 180px;
 }
-#sponsor-bronze-4 {
+/* #sponsor-bronze-4 {
   width: 220px;
   height: auto;
+} */
+
+#sponsor-bronze-4 {
+  height: 50px;
 }
 
 #sponsor-title {
