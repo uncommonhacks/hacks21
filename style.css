@@ -262,6 +262,7 @@ on diffrent interval using keyframe*/
 }
 #faq {
   background-color: #090f10;
+  z-index: 1;
 }
 .faqq {
   font-weight: 600;
@@ -330,6 +331,18 @@ on diffrent interval using keyframe*/
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
+}
+#faq_image {
+  z-index: 0;
+}
+#faq-body {
+  z-index: 1;
+}
+#gamer {
+  z-index: 0;
+}
+#schedule-body {
+  z-index: 1;
 }
 @media (min-width: 951px) {
   #faq_image{
